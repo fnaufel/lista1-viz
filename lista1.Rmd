@@ -1,0 +1,254 @@
+---
+title: 'R e visualização'
+subtitle: 'Lista avaliativa 1 -- Probabilidade e Estatística -- 2022.2'
+author: 'fnaufel'
+email: 'https://fnaufel.github.io/'
+date: '   (v. `r format(Sys.Date(), "%d/%m/%Y")`)'
+lang: 'pt-br'
+
+output: 
+  # To install these output formats, run
+  #   install.packages("devtools")
+  #   devtools::install_github("fnaufel/fnaufelRmd")
+  fnaufelRmd::html_report:
+    []
+---
+
+```{r setup, include=FALSE}
+# The next command configures MANY things and loads quite a few packages.
+# 
+# If you want to see what's being done, execute 
+# 
+#   cat(
+#     system.file(
+#       "rmarkdown/resources/R/_common_report.R", 
+#       package = "fnaufelRmd"
+#     )
+#   )
+# 
+# to find out the location of the file. Then open the file.
+# 
+# If you want to change the configuration, copy the file, edit it, and
+# source it instead of the package file. 
+# 
+# Or simply write your commands here in this code chunk.
+
+source(
+  system.file(
+    "rmarkdown/resources/R/_common_report.R",
+    package = "fnaufelRmd"
+  )
+)
+```
+
+
+# Instruções {-}
+
+* Escolha um dos [conjuntos de dados sugeridos](#datasets).
+
+* Clique o botão `Code`, no início desta página, para baixar o arquivo Rmd deste documento.
+
+* Edite o arquivo Rmd para resolver as suas questões. 
+
+* Escreva o máximo possível sobre o seu raciocínio. Justifique suas respostas.
+
+* Teste suas respostas. Tudo deve estar executando sem erros.
+
+* [Envie no Moodle: ]{.hl}
+
+  1. O arquivo Rmd com as suas resoluções e
+  
+  1. Um vídeo de até $5$ minutos explicando as suas resoluções.
+
+* Bom trabalho.
+
+
+# Ambiente {-}
+
+* Para gerar um arquivo HTML a partir deste documento, você precisa dos seguintes pacotes do R:
+
+  ```{r echo=FALSE, results='asis'}
+  pacotes <- session_info('attached')$packages$package
+  pacotes_tidy <- getNamespace("tidyverse")$core
+  pacotes <- c(
+    setdiff(pacotes, pacotes_tidy),
+    'fnaufelRmd',
+    'devtools'
+  ) %>% 
+    sort()
+   
+  paste('  * `', pacotes, '`', collapse = '\n\n') %>% 
+    cat()
+  ```
+
+* Execute o seguinte código para instalar os pacotes que estão faltando no seu ambiente:
+
+    ```{r message=FALSE, eval=FALSE}
+    if (!require('devtools'))
+      install.packages('devtools')
+    
+    if (!require('fnaufelRmd'))
+      devtools::install_github("fnaufel/fnaufelRmd")
+    
+    pacotes <- c(
+      'conflicted',
+      'janitor',
+      'kableExtra',
+      'knitr',
+      'latex2exp',
+      'sessioninfo',
+      'summarytools',
+      'tidyverse'
+    )
+    
+    instalar_se_preciso <- function(x) {
+      
+      if (!require(x, character.only = TRUE))
+        install.packages(x)
+      
+    }
+    
+    invisible(sapply(pacotes, instalar_se_preciso))
+    ```
+
+* Se houver erro na instalação, entre em contato comigo pelo Telegram, [enviando todas as mensagens emitidas quando você executou os comandos]{.hl}.
+
+
+# Conjuntos de dados {- #datasets}
+
+
+
+
+# Leitura e limpeza dos dados
+
+* Use uma das funções `read_...` do `tidyverse` para ler os dados para uma *tibble*.
+
+* Use a função `glimpse` para inspecionar a *tibble*.
+
+* Se preciso, refaça a leitura dos dados especificando os tipos das colunas.
+
+* Se preciso, use a função `janitor::clean_names` para limpar os nomes das colunas.
+
+* Use a função `summarytools::dfSummary` para gerar um sumário da *tibble*.
+
+* Verifique se há valores faltantes (`NA`) ou valores obviamente errados.
+
+* Se preciso, altere a *tibble* para corrigir erros óbvios.
+
+* Se preciso, altere a *tibble* para facilitar a manipulação dos dados. Por exemplo:
+
+  * Use `pivot_wider` ou `pivot_longer` para alterar o formato da *tibble*;
+  
+  * Use as funções do pacote `lubridate` para converter entre *strings* e datas/horários;
+  
+  * Use as funções do pacote `stringr` e a função `mutate` para extrair informações que estão em um mesmo *string*, criando colunas separadas, uma para cada informação;
+  
+  * Use a função `mutate` para converter unidades.
+
+
+# Análise exploratória {#eda}
+
+* Verifique a quantidade de valores diferentes em colunas de interesse.
+
+* Verifique a quantidade de valores `NA` em colunas de interesse.
+
+* Agregue os dados usando `group_by` e gere estatísticas interessantes usando `summarize`.
+
+* Formule perguntas interessantes sobre os dados e responda-as. 
+
+  [Este passo é importante, pois pode lhe dar boas idéias para os gráficos que você vai construir.]{.hl}
+
+
+# Visualização
+
+::: {.rmdimportant latex=1}
+
+* Todos os gráficos devem ser feitos com o pacote `ggplot2`.
+
+* Todos os gráficos devem incluir títulos, rótulos, legendas, e outros elementos para facilitar a compreensão. Imagine que seus gráficos serão publicados em uma revista científica.
+
+* [Para cada gráfico que você construir, inclua um parágrafo comentando as conclusões]{.hl} que podem ser tiradas a partir do gráfico.
+
+:::
+
+
+## *Scatter plots*
+
+* Construa um ou mais *scatter plots* para examinar a relação entre variáveis da *tibble*.
+
+* Se possível (e razoável), use cores, formas, e/ou tamanhos para incluir mais informação nos gráficos.
+
+* Quando for razoável, aplique transformações às escalas (e.g., logaritmos, quadrados, etc.).
+
+* Use `geom_smooth` para gerar retas de regressão.
+
+
+## Histogramas
+
+* Construa um ou mais histogramas de variáveis da *tibble*.
+
+* Quando for razoável, reúna vários histogramas em um gráfico facetado.
+
+* Quando for razoável, aplique transformações às escalas (e.g., logaritmos, quadrados, etc.).
+
+
+## *Boxplots*
+
+* Construa um ou mais *boxplots* de variáveis da *tibble*.
+
+* Quando for razoável, construa um ou mais *boxplots* [lado a lado]{.hl} de variáveis da *tibble*.
+
+* Quando for razoável, aplique transformações às escalas (e.g., logaritmos, quadrados, etc.).
+
+
+## Barras e colunas
+
+* Construa um ou mais gráficos de barras ou colunas envolvendo variáveis da *tibble*.
+
+* Se possível (e razoável), use cores de preenchimento para incluir mais informação nos gráficos.
+
+* Experimente diferentes paletas de cores.
+
+* Quando for razoável, reúna vários gráficos de barras ou colunas em um gráfico facetado.
+
+* Quando for razoável, construa gráficos de barras ou colunas com proporções em vez de quantidades.
+
+* Quando for razoável, construa gráficos de barras ou colunas sobrepostas (*stacked*).
+
+* Quando for razoável, construa gráficos de barras ou colunas lado a lado (*dodged*).
+
+* Quando for razoável, ordene as barras ou colunas (da menor para a maior, ou vice-versa).
+
+* Quando for razoável, aplique transformações às escalas (e.g., logaritmos, quadrados, etc.).
+
+
+## Gráficos de linha
+
+* Se possível, construa um ou mais gráficos de linhas envolvendo variáveis da *tibble*.
+
+* Se não for possível, explique por quê.
+
+* Quando for razoável, aplique transformações às escalas (e.g., logaritmos, quadrados, etc.).
+
+
+# Bibliografia sugerida {-}
+
+* Meu livro eletrônico:
+
+  * [Capítulo 3: Introdução ao tidyverse](https://fnaufel.github.io/probestr/introdu%C3%A7%C3%A3o-ao-tidyverse.html).
+  
+  * [Capítulo 4: Visualização com ggplot2](https://fnaufel.github.io/probestr/viz.html).
+  
+  * [Capítulo 5: Visualização com ggplot2 (continuação)](https://fnaufel.github.io/probestr/viz2.html).
+
+* [*Introdução a R para Visualização e Apresentação de Dados*, 
+Sillas Gonzaga](http://sillasgonzaga.com/material/curso_visualizacao/index.html).
+
+* [*Introdução à Análise de Dados em R utilizando Tidyverse*, 
+Allan Vieira de Castro Quadros](https://allanvc.github.io/book_IADR-T/), em especial os módulos II e IV.
+
+* [*Ciência de Dados com R - Introdução*, Saulo Guerra, Paulo Felipe de Oliveira, Robert McDonnell e Sillas Gonzaga](https://cdr.ibpad.com.br/index.html).
+
+* [*Ciência de Dados em R*, Curso-R](https://livro.curso-r.com/), em especial os capítulos 4 a 8.
+
+<div style='height: 200px'></div>
