@@ -3,3 +3,9 @@
 .Rdata
 .httr-oauth
 .DS_Store
+dados
+html_files
+lista1-viz.Rproj
+lista1.html
+pdf_files
+scratch.Rmd
