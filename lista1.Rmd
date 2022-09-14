@@ -116,9 +116,70 @@ source(
 
 # Conjuntos de dados {- #datasets}
 
+1. [YouTube Trending Video (Brasil)](https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=BR_youtube_trending_data.csv).
 
+   Cuidado: o arquivo é atualizado diariamente. Baixe apenas uma vez.
+  
+   [Eduarda]{.hl}.
+  
+1. [Incêndios florestais na Amazônia](https://www.kaggle.com/datasets/gustavomodelli/forest-fires-in-brazil).
 
+   [Fabrício]{.hl}.
 
+1. [Bolsa família](https://data.world/associatedpress/bolsa-familia-aid-to-brazils-poor/workspace/data-dictionary).
+
+   [Ricardo]{.hl}.
+
+1. [Acidentes de carro](https://www.kaggle.com/datasets/raphaelmarconato/detran-accidents-2020).
+
+   [Matheus Citeli]{.hl}.
+   
+1. [Vôos no BR](https://www.kaggle.com/datasets/ramirobentes/flights-in-brazil).
+
+   [Gabriel Knust]{.hl}.
+
+1. [TikTok](https://www.kaggle.com/datasets/ilanbrik/brazilian-tiktok-trending-videos).
+
+   [Ayrton]{.hl}.
+   
+1. [Meteoritos](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh).
+
+   [Mateus]{.hl}.
+   
+1. [Aviões da Segunda Guerra](https://www.kaggle.com/datasets/iskk97/ww2-aircraft).
+
+   [Raphael]{.hl}.
+
+1. [Casas para alugar](https://www.kaggle.com/datasets/rubenssjr/brasilian-houses-to-rent).
+
+1. [Preços de combustível no Brasil](https://www.kaggle.com/datasets/matheusfreitag/gas-prices-in-brazil).
+
+1. [Crime no Brasil](https://www.kaggle.com/datasets/inquisitivecrow/crime-data-in-brazil).
+
+   Usar os arquivos `RDO_1.csv`, `RDO_3.csv`, e `RDO_3.csv`.
+   
+1. [CEPS](https://data.mendeley.com/datasets/g97jb8fp57/1).
+
+1. [Jogadores de futebol da Liga Européia](http://leg.ufpr.br/~walmes/data/euro_football_players.txt).
+
+1. [Carros à venda](http://leg.ufpr.br/~walmes/data/carros_venda_webmotors_270314.txt).
+
+1. [Aptos para alugar em Curitiba](http://leg.ufpr.br/~walmes/data/ap_venda7bairros_cwb_210314.txt).
+
+1. [Triatlo](http://leg.ufpr.br/~walmes/data/triathlon.txt).
+
+1. [Coberturas à venda](http://leg.ufpr.br/~walmes/data/coberturas-venda-cwb-26Jan2018.txt).
+
+1. [Aeronaves](https://www.kaggle.com/datasets/mateuscco/brazilian-aircraft-fleet). 
+
+   Só o arquivo `aircrafts.csv`.
+   
+1. [Bicicletas em Brasília](https://www.kaggle.com/datasets/joseguilhermelopes/bike-sharing-system-in-brasilia-brazil?select=df_rides.csv).
+
+   Só o arquivo `rides.csv`.
+   
+
+   
 # Leitura e limpeza dos dados
 
 * Use uma das funções `read_...` do `tidyverse` para ler os dados para uma *tibble*.
