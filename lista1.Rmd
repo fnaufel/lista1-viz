@@ -56,7 +56,9 @@ source(
 
 * [Envie no Moodle: ]{.hl}
 
-  1. O arquivo Rmd com as suas resoluções e
+  1. O(s) conjunto(s) de dados que você usou,
+
+  1. O arquivo Rmd com as suas resoluções, e
   
   1. Um vídeo de até $5$ minutos explicando as suas resoluções.
 
@@ -116,12 +118,6 @@ source(
 
 # Conjuntos de dados {- #datasets}
 
-1. [YouTube Trending Video (Brasil)](https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=BR_youtube_trending_data.csv).
-
-   Cuidado: o arquivo é atualizado diariamente. Baixe apenas uma vez.
-  
-   [Eduarda]{.hl}.
-  
 1. [Incêndios florestais na Amazônia](https://www.kaggle.com/datasets/gustavomodelli/forest-fires-in-brazil).
 
    [Fabrício]{.hl}.
@@ -150,34 +146,53 @@ source(
 
    [Raphael]{.hl}.
 
-1. [Casas para alugar](https://www.kaggle.com/datasets/rubenssjr/brasilian-houses-to-rent).
+1. [Coberturas à venda](http://leg.ufpr.br/~walmes/data/coberturas-venda-cwb-26Jan2018.txt).
 
-1. [Preços de combustível no Brasil](https://www.kaggle.com/datasets/matheusfreitag/gas-prices-in-brazil).
+   [Mari]{.hl}.
+
+1. [Bicicletas em Brasília](https://www.kaggle.com/datasets/joseguilhermelopes/bike-sharing-system-in-brasilia-brazil?select=df_rides.csv).
+
+   Só o arquivo `rides.csv`.
+   
+   [Bernardo]{.hl}.
 
 1. [Crime no Brasil](https://www.kaggle.com/datasets/inquisitivecrow/crime-data-in-brazil).
 
    Usar os arquivos `RDO_1.csv`, `RDO_3.csv`, e `RDO_3.csv`.
    
-1. [CEPS](https://data.mendeley.com/datasets/g97jb8fp57/1).
+   [Luiz]{.hl}.
+   
+1. [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams).
 
-1. [Jogadores de futebol da Liga Européia](http://leg.ufpr.br/~walmes/data/euro_football_players.txt).
+   [Leonardo]{.hl}.
 
-1. [Carros à venda](http://leg.ufpr.br/~walmes/data/carros_venda_webmotors_270314.txt).
+1. [Casas para alugar](https://www.kaggle.com/datasets/rubenssjr/brasilian-houses-to-rent).
 
-1. [Aptos para alugar em Curitiba](http://leg.ufpr.br/~walmes/data/ap_venda7bairros_cwb_210314.txt).
-
-1. [Triatlo](http://leg.ufpr.br/~walmes/data/triathlon.txt).
-
-1. [Coberturas à venda](http://leg.ufpr.br/~walmes/data/coberturas-venda-cwb-26Jan2018.txt).
+   [Léo]{.hl}.
 
 1. [Aeronaves](https://www.kaggle.com/datasets/mateuscco/brazilian-aircraft-fleet). 
 
    Só o arquivo `aircrafts.csv`.
    
-1. [Bicicletas em Brasília](https://www.kaggle.com/datasets/joseguilhermelopes/bike-sharing-system-in-brasilia-brazil?select=df_rides.csv).
-
-   Só o arquivo `rides.csv`.
+   [Carla]{.hl}.
    
+1. [Aptos para alugar em Curitiba](http://leg.ufpr.br/~walmes/data/ap_venda7bairros_cwb_210314.txt).
+
+   [Bruno]{.hl}.
+
+1. [Preços de combustível no Brasil](https://www.kaggle.com/datasets/matheusfreitag/gas-prices-in-brazil).
+
+1. [CEPS](https://data.mendeley.com/datasets/g97jb8fp57/1).
+
+1. [Jogadores de futebol da Liga Européia](http://leg.ufpr.br/~walmes/data/euro_football_players.txt).
+
+1. [YouTube Trending Video (Brasil)](https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=BR_youtube_trending_data.csv).
+
+   Cuidado: o arquivo é atualizado diariamente. Baixe apenas uma vez.
+  
+1. [Carros à venda](http://leg.ufpr.br/~walmes/data/carros_venda_webmotors_270314.txt).
+
+1. [Triatlo](http://leg.ufpr.br/~walmes/data/triathlon.txt).
 
    
 # Leitura e limpeza dos dados
